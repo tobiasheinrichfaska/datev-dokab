@@ -5,8 +5,8 @@ read documents, file new ones, and write edited bytes back to an existing docume
 conservative, pure guard (`datev.writeback.decide_save_back`) that refuses to overwrite when the
 server state no longer matches what was opened. The import name is `datev`.
 
-Extracted from the DigitalerUnterlagenOrdner (BelegTool) project, which consumes it in its
-optional "DATEV mode". No UI, no third-party dependencies; the transport is injected, so everything
+Used by the DigitalerUnterlagenOrdner (BelegTool) project in its optional "DATEV mode". Origin: split out
+with its full history from DigitalerUnterlagenOrdner (`packages/datev-dokab`) on 2026-11-27. No UI, no third-party dependencies; the transport is injected, so everything
 except the real network call is unit-testable.
 
 ## Requirements
@@ -20,7 +20,7 @@ except the real network call is unit-testable.
 
 ```
 pip install .                     # from this directory
-pip install "datev-dokab @ git+https://github.com/<owner>/datev-dokab.git@v0.1.0"
+pip install "datev-dokab @ git+https://github.com/tobiasheinrichfaska/datev-dokab.git@v0.1.0"
 pip install -e .[dev] && pytest   # development
 ```
 
